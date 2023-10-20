@@ -13,7 +13,6 @@ DATA cargo TYPE REF TO zcl_04_airplane.
 DATA cargo2 TYPE REF TO zcl_04_airplane.
 DATA cargo3 TYPE REF TO zcl_04_airplane.
 
-
 **********************************************************************
 * Vehicles deklarieren *
 **********************************************************************
@@ -26,6 +25,10 @@ DATA truck TYPE REF TO zcl_04_vehicle.
 DATA rental TYPE REF TO zcl_04_rental.
 DATA carrier TYPE REF TO zcl_04_carrier.
 
+**********************************************************************
+* Agency deklarieren *
+**********************************************************************
+DATA agency TYPE REF TO zcl_04_agency.
 
 **********************************************************************
 * Planes anlegen *
@@ -35,14 +38,11 @@ cargo = NEW zcl_04_cargo( name_i = 'Choncc' type_i = 'BigAhh' cargo_in_tons = 13
 cargo2 = NEW zcl_04_cargo( name_i = 'Bruh' type_i = 'Bameninghong' cargo_in_tons = 4000 ).
 cargo3 = NEW zcl_04_cargo( name_i = 'Idk' type_i = 'Fckyou' cargo_in_tons = 250 ).
 
-
-
 **********************************************************************
 * Vehicles anlegen  *
 **********************************************************************
 auto = NEW zcl_04_car( make_i = 'VW' model_i = 'Gooffa' number_of_seats = 1000 ).
 truck = NEW zcl_04_truck( make_i = 'Tesla' model_i = 'Cybertruck' cargo_in_tons = 30 ).
-
 
 **********************************************************************
 * Verteiler anlegen *
@@ -51,9 +51,8 @@ rental = NEW zcl_04_rental( name = 'GoofyRental' ).
 carrier = NEW zcl_04_carrier( name = 'Bababooey' ).
 
 **********************************************************************
-* Agency deklarieren und anlegen *
+* Agency anlegen *
 **********************************************************************
-DATA agency TYPE REF TO zcl_04_agency.
 agency = NEW zcl_04_agency( name = 'GoofyAhhAgency GmbH' ).
 
 **********************************************************************
